@@ -44,10 +44,6 @@ body{
     box-sizing: border-box;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
-
-}
-.orderButtonText{
-    margin: 0;
     justify-content: center;
     font-family: Gilroy;
     font-style: normal;
@@ -59,6 +55,27 @@ body{
     text-transform: uppercase;
 
     color: #F7941E;
+
+}
+.orderButton:hover{
+    width: 8%;
+    height: 40%;
+    border: 1px solid #F7941E;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #F7941E;
+    justify-content: center;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
 }
 
 /* BLOCKS */
@@ -104,9 +121,6 @@ body{
     border: 0;
     width: 30%;
     height: 11%;
-}
-.text_button_block1_content{
-    margin: 0;
     justify-content: center;
     font-family: Gilroy;
     font-style: normal;
@@ -118,6 +132,25 @@ body{
     text-transform: uppercase;
     
     color: #FFFFFF;
+}
+.button_block1_content:hover{
+    background: #F1F1F2;
+    border-radius: 5px;
+    border: 1px solid #F7941E;
+    box-sizing: border-box;
+    width: 30%;
+    height: 11%;
+    justify-content: center;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #F7941E;
 }
 .block_2_3{
     width: 50%;
