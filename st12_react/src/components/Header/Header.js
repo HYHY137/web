@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.scss';
-import logo from "../../images/logo.png"
-import {Links} from "./Links"
+import logo from "../../images/logo.png";
+import {Links} from "./Links";
 
 class Header extends React.Component {
     constructor(props) {

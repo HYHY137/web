@@ -1,5 +1,5 @@
-import React from 'react'
-import './Header.scss';
+import React from 'react';
+import "./Header.scss";
 
 export const Links = function(prop){
     const links = prop.links.map((link,index) => 
