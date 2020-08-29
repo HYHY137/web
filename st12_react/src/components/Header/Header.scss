@@ -1,0 +1,70 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 14vh;
+    
+}
+.navigation_links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 20%;
+    padding-right: 9%;
+}
+.header_link{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin: 0% 2% 0% 1%;
+    text-decoration:none;
+}
+.logo{
+    width: 17%;
+    height: 80%;
+}
+.orderButton{
+    width: 8%;
+    height: 40%;
+    border: 1px solid #F7941E;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #F7941E;
+
+}
+.orderButton:hover{
+    width: 8%;
+    height: 40%;
+    border: 1px solid #F7941E;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #F7941E;
+    justify-content: center;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+}
