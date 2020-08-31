@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Body.scss";
 import { Blocks } from './Blocks';
+import { Services } from './Services';
 
 class Body extends React.Component{
     constructor(props){
@@ -10,6 +11,7 @@ class Body extends React.Component{
         return(
             <div>
                 <Blocks />
+                <Services />
             </div>
 
         )
