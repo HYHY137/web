@@ -1,5 +1,5 @@
-import React from 'react'
-import "./Body.scss"
+import React from 'react';
+import "./Body.scss";
 
 export const Card = function(props){
     return(

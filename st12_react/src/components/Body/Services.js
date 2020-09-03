@@ -1,6 +1,6 @@
-import React from 'react'
-import "./Body.scss"
-import {Card} from "./Card"
+import React from 'react';
+import "./Body.scss";
+import {Card} from "./Card";
 import banket from "../../images/Media_bankets.png";
 import catering from "../../images/Media_catering.png";
 import corporat from "../../images/Media_corporat.png";
@@ -24,18 +24,20 @@ export const Services = function(props){
                 <h1 className="h1_sevices_title">{content.title.title}</h1>
                 <p className="text_sevices_title">{content.title.text}</p>
             </div>
-            <div class="cards">
+            <div className="cards">
                 {
                     content.cards.map((card,index) =>{
                         return (
-                            <Card img={card.img} alt={card.alt} title={card.title} link={card.title}/>
+                            <Card key={index} img={card.img} alt={card.alt} title={card.title} link={card.title}/>
                         )
                     })
                 }
                 
             </div>
+            <hr className="line"></hr>
         </div>
 
+            
 
     )
 }
