@@ -10,7 +10,7 @@ class Body extends React.Component{
     }
     render(){
         return(
-            <div>
+            <div className="container">
                 <Blocks />
                 <Services />
                 <Addresses />

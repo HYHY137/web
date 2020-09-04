@@ -25,7 +25,7 @@ export const MapY = function(props){
                         }}
                         />
                 </Map>
-                <h1 class="h1_add">{props.addressDesc}</h1>
+                <h1 className="h1_add">{props.addressDesc}</h1>
             </div>
         </YMaps>
 )
