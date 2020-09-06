@@ -21,7 +21,7 @@ export const Blocks = function(props){
         <div className="blocks">
             <BlockContent button={true} title={content.title1} text={content.text1} titleClass={content.title1Class} textClass={content.text1Class}/>
             <BlockImg img={food1} />
-            <BlockImg img={team} />
+            <BlockImg img={team} id="aboutUs" />
             <BlockContent button={false} title={content.title4} text={content.text4} titleClass={content.title4Class}  textClass={content.text4Class}/>
         </div>
     )

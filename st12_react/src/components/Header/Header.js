@@ -7,10 +7,10 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.links = [
-            {ref:"", label:"Главная"},
-            {ref:"", label:"О нас"},
-            {ref:"", label:"Услуги"},
-            {ref:"", label:"Отзывы"},
+            {ref:"aboutUs", label:"Главная"},
+            {ref:"aboutUs", label:"О нас"},
+            {ref:"aboutUs", label:"Услуги"},
+            {ref:"aboutUs", label:"Адреса"},
         ];
     }
    
