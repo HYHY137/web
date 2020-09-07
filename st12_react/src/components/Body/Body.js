@@ -10,11 +10,12 @@ class Body extends React.Component{
     }
     render(){
         return(
-            <div className="container">
+            <div className="container" id="container">
                 <Blocks />
                 <Services />
                 <Addresses />
             </div>
+            
 
         )
     }

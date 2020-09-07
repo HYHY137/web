@@ -1,15 +1,21 @@
 import React from 'react';
 import "./Header.scss";
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
 
-export const Links = function(prop){
+export const Links = function(props){
     return(
         <div className="navigation_links">
-            {
-                prop.links.map((link,index) => {
+            {   
+                props.links.map((link,index) => {
                 return(
-                    <Link key={index} to={link.ref} activeClass="active" className="test6" spy={true} smooth={true} duration={500}>{link.label}</Link>
+                    <Link   key={index} 
+                            offset={-(window.innerHeight*0.14)}
+                            to={link.ref} 
+                            spy={true} 
+                            smooth={true} 
+                            duration={500}>
+                    <a key={index} href={link.ref} className="header_link"  >{link.label}</a>            
+                    </Link>
                 )}
                 )
             }

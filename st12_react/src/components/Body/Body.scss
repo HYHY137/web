@@ -1,4 +1,5 @@
 .blocks{
+    margin-top: 14vh;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -72,6 +73,7 @@
     color: #F7941E;
 }
 .block_2_3{
+    scroll-margin-top: 14vh;
     width: 50%;
     height: 50%;
 }
@@ -80,11 +82,6 @@
     height: 100%;
 }
 
-.block1_content{
-    width: 70%;
-    height: 70%;
-
-}
 .h1_block4_content{
     width: 100%;
     height: 30%;
@@ -106,6 +103,7 @@
 }
 /* SERVICES */
 .sevices{
+    scroll-margin-top: 14vh;
     width: 100%;
     height: 100vh;
 }
@@ -178,8 +176,9 @@
 }
 /* ADDRESSES */
 .addresses{
+    scroll-margin-top: 14vh;
     width: 100%;
-    height: 70vh; 
+    height: 90vh; 
     /* background-color: cadetblue; */
 }
 .h1_add{

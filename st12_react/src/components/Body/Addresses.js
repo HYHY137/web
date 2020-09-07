@@ -8,7 +8,7 @@ export const Addresses = function(){
       {mapCenter:[53.916700, 27.558480], placemark:[53.916700, 27.558480], addressDesc: "г.Минск, ул.Машерова д.25"}
     ]
     return (
-        <div className="addresses">
+        <div className="addresses" id="addresses">
           <h1 className="h1_sevices_title">Наши адреса</h1>
           <div className="addresses_cards">
               {

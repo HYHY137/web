@@ -1,8 +1,13 @@
 .header{
+    top: 0;
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 14vh;
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 10000;
     
 }
 .navigation_links{
@@ -21,7 +26,7 @@
     align-items: center;
     text-align: center;
     color: #000000;
-    margin: 0% 2% 0% 1%;
+    margin: 0;
     text-decoration:none;
 }
 .logo{

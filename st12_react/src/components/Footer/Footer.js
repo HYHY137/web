@@ -23,35 +23,28 @@ export const Footer = function(props){
     }
     return(
         <div className="footer">
-            <div className="footer_links">
+            <hr className="line"></hr>
+            <div className="footer_social">
             {
-                content.links.map((link,index) =>{
+                content.socials.map((social,index) =>{
                     if (index===1){
                         return ([
-                            <a key={index} className="footer_link" href={link.href}>{link.text}</a>,
+                            <a key={index} href={social.href} className="social_link">
+                            <img alt={social.alt} src={social.src}
+                            className="social_icon"></img>
+                            </a>,
                             <img key={index + Math.random()} src={logo} className="footer_logo" alt="logo"></img>
                         ]);
                     }
                     else{
                         return(
-                        <a key={index} className="footer_link" href={link.href}>{link.text}</a>
+                                <a key={index} href={social.href} className="social_link">
+                                    <img alt={social.alt} src={social.src}
+                                    className="social_icon"></img>
+                                </a>
                     )}
                     })
             }
-            </div>
-            <hr className="line"></hr>
-            <div className="footer_social">
-                {
-                    content.socials.map((social,index)=>{
-                        return(
-                            <a key={index} href={social.href} className="social_link">
-                                <img alt={social.alt} src={social.src}
-                                className="social_icon"></img>
-                            </a>
-                        )
-                    }
-                    )
-                }
             </div>
         </div>  
     )

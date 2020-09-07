@@ -19,7 +19,7 @@ export const Services = function(props){
         ]
     }
     return(
-        <div className="sevices">
+        <div className="sevices" id="services">
             <div className="sevices_title">
                 <h1 className="h1_sevices_title">{content.title.title}</h1>
                 <p className="text_sevices_title">{content.title.text}</p>
