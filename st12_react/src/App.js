@@ -1,15 +1,19 @@
 import React from 'react';
 import './App.scss';
-import Header from "./components/Header/Header";
-import Body from './components/Body/Body';
-import {Footer} from './components/Footer/Footer';
+import {Home} from "./components/Home/Home";
+import {Menu} from "./components/Menu/Menu";
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Body />
-      <Footer />
+      <Router>    
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/menu' component={Menu}/>
+        </Switch>
+      </Router>
+      
     </div>
   );
 }

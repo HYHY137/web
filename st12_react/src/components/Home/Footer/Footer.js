@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Footer.scss";
-import telegram from "../../images/telegram.png";
-import instagram from "../../images/instagram.png";
-import email from "../../images/email.png";
-import telephone from "../../images/phone.png";
-import logo from "../../images/logo.png";
+import telegram from "../../../images/telegram.png";
+import instagram from "../../../images/instagram.png";
+import email from "../../../images/email.png";
+import telephone from "../../../images/phone.png";
+import logo from "../../../images/logo.png";
 
 export const Footer = function(props){
     const content = {

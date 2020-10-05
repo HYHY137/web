@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Body.scss";
 import {Card} from "./Card";
-import banket from "../../images/Media_bankets.png";
-import catering from "../../images/Media_catering.png";
-import corporat from "../../images/Media_corporat.png";
-import delivery from "../../images/Media_delivery.png";
+import banket from "../../../images/Media_bankets.png";
+import catering from "../../../images/Media_catering.png";
+import corporat from "../../../images/Media_corporat.png";
+import delivery from "../../../images/Media_delivery.png";
 
 export const Services = function(props){
     const content = {

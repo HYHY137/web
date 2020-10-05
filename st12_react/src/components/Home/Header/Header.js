@@ -1,8 +1,8 @@
 import React from 'react'
 import './Header.scss';
-import logo from "../../images/logo.png";
+import logo from "../../../images/logo.png";
 import {Links} from "./Links";
-
+import {Link} from "react-router-dom";
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -21,7 +21,10 @@ class Header extends React.Component {
                 <img src={logo} className="logo" alt="logo"/>
                 <Links links={this.links}/>
                 <button type="button" className="orderButton">
-                    <p>PLACE ORDER</p>
+                    <Link to="/menu">
+                        <p>PLACE ORDER</p>
+                    </Link>
+                    
                 </button>
             </header>
         

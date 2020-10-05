@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Body.scss";
-import food1 from "../../images/food1.png";
-import team from "../../images/team.png";
+import food1 from "../../../images/food1.png";
+import team from "../../../images/team.png";
 import {BlockImg} from "./BlockImg";
 import {BlockContent} from "./BlockContent";
 
