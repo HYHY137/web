@@ -18,7 +18,6 @@ export default function Register() {
     const submit = async (e) =>{
         e.preventDefault();
         const newUser = { email, phoneNumber, name, password, passwordCheck};
-        console.log(newUser)
         await Axios.post("http://localhost:5000/user/register", newUser);
         const loginRes = await Axios.post("http://localhost:5000/user/login", {
             email: email,
