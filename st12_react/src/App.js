@@ -23,14 +23,17 @@ useEffect(() => {
       localStorage.setItem("auth-token", "");
       token = "";
     }
-    const tokenRes = await Axios.post("http://localhost:5000/users/tokenIsValid", null, { headers: { "x-auth-token": token }});
-    if (tokenRes.data){
-      const userRes = await Axios.get("http://localhost:5000/users/", { headers: { "x-auth-token": token }});
+    
+    const tokenRes = await Axios.post("http://localhost:5000/user/tokenIsValid", null, { headers: { "x-auth-token": token }});
+    if (tokenRes.data) {
+      const userRes = await Axios.get("http://localhost:5000/user/", {
+        headers: { "x-auth-token": token },
+      });
+      setUserData({
+        token,
+        user: userRes.data,
+      });
     }
-    setUserData({
-      token: token,
-      user: userData.data,
-    })
   };
   checkLoggedIn();
 }, [])
@@ -38,7 +41,7 @@ useEffect(() => {
   return (
     <div className="App">
       <Router> 
-        <UserContext.Provider value={ userData, setUserData }>
+        <UserContext.Provider value={ {userData, setUserData} }>
           <Switch>
             <Route exact path='/'>
               <Redirect to="/home" />

@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 export const Links = function(props){
     return(
-        <div className="navigation_links">
+        <div className={props.className}>
             {   
                 props.links.map((link,index) => {
                 return(

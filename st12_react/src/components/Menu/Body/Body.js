@@ -1,35 +1,19 @@
 import React from 'react';
-import "./Body.scss";
-import { Blocks } from './Blocks';
-import { Services } from './Services';
-import { Addresses } from './Addresses';
+import {Links} from "../../Home/Header/Links";
+import "./MenuBody.scss"
 
-class Body extends React.Component{
-    constructor(props){
-        super(props);    
-    }
-    render(){
-        return(
-            <div className="container" id="container">
-                <Blocks />
-                <Services />
-                <Addresses />
-            </div>
-            
-
-        )
-    }
+export default function Body() {
+    const links = [
+        {ref:"container", label:"Салаты"},
+        {ref:"services", label:"Закуски"},
+        {ref:"aboutUs", label:"Супы"},
+        {ref:"services", label:"Второе"},
+        {ref:"services", label:"Напитки"},
+        {ref:"addresses", label:"Десерты"},
+    ];
+    return (
+        <div>
+             <Links links={links} className="menu_navigation_links"/>
+        </div>
+    )
 }
-
-export default Body;
-
-
-
-
-
-
-
-
-
-
-

@@ -17,7 +17,7 @@ export default function Header() {
             <Link to="/home" className="logo_link">
                 <img src={logo} className="logo" alt="logo"/>
             </Link>
-            <Links links={links}/>
+            <Links links={links} className="home_navigation_links"/>
             <button type="button" className="orderButton" onClick={menu}>
                 <p>PLACE ORDER</p>
             </button>
