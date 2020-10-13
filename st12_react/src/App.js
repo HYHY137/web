@@ -3,8 +3,8 @@ import './App.scss';
 import Axios from 'axios';
 import {Home} from "./components/Home/Home";
 import {Menu} from "./components/Menu/Menu";
-import Login from "./components/Login/Login";
-import Register from "./components/Register/Register";
+import Login from "./components/Auth/Login/Login";
+import Register from "./components/Auth/Register/Register";
 import UserContext from "./context/UserContext";
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 
