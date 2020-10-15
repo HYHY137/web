@@ -84,6 +84,7 @@ router.post("/login", async (req, res) => {
                 email: user.email,
                 phoneNumber: user.phoneNumber,
                 name: user.name,
+                role: user.role,
             }
         })
 
@@ -126,6 +127,7 @@ router.get("/", auth, async (req, res) => {
             name: user.name,
             email: user.email,
             phoneNumber: user.phoneNumber,
+            role: user.role,
         });
     } catch (err) {
         res.status(500).json({ error: err.message });
@@ -134,6 +136,41 @@ router.get("/", auth, async (req, res) => {
 
 router.put("/:id", auth, async (req, res) => {
     try {
+        if(req.body.email){
+            const existingUser = await User.find({ email: req.body.email });
+            if (existingUser.length>1) {
+                return res.status(400).json({ msg: "An account with this email alredy exists." })
+            }
+        } else{
+            return res.status(400).json({ msg: "Email must be filled" })
+        }
+        if(req.body.password){
+            if (req.body.password.length < 6)
+                return res.status(400).json({ msg: "Passport needs to be at least 6 character long." });
+        }    
+        if(req.body.email){
+            if (!validator.isEmail(req.body.email))
+                return res.status(400).json({ msg: "Email is incorrect." });
+        }    
+
+        if (req.body.phoneNumber){
+            if (!validator.isMobilePhone(req.body.phoneNumber)) {
+                return res.status(400).json({ msg: "Phone number is incorrect." });
+            }
+        }
+        
+        if (req.body.password){
+            if (req.body.password !== req.body.passwordCheck){
+                return res.status(400).json({ msg: "Password fields don't match." });
+            }
+            const salt = await bcrypt.genSalt();
+            const passwordHash = await bcrypt.hash(req.body.password, salt);
+            req.body.password = passwordHash;
+        }
+        
+        if (!req.body.name || req.body.name === "") {
+            req.body.name = req.body.email;
+        }
         const updatedUser = await User.findByIdAndUpdate(req.params.id, {$set: req.body})
         res.json(updatedUser)
     } catch (err) {

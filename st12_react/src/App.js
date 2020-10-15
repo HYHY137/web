@@ -3,8 +3,11 @@ import './App.scss';
 import Axios from 'axios';
 import {Home} from "./components/Home/Home";
 import {Menu} from "./components/Menu/Menu";
+import EditMenu from "./components/Admin/EditMenu";
+import EditUser from "./components/Admin/EditUser";
 import Login from "./components/Auth/Login/Login";
 import Register from "./components/Auth/Register/Register";
+import ProfilePage from "./components/User/ProfilePage"
 import UserContext from "./context/UserContext";
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 
@@ -50,6 +53,9 @@ useEffect(() => {
             <Route exact path='/login' component={Login}/>
             <Route exact path='/register' component={Register}/>
             <Route exact path='/menu' component={Menu}/>
+            <Route exact path='/menu/edit' component={EditMenu}/>
+            <Route exact path='/users' component={EditUser}/>
+            <Route exact path='/user/profile' component={ProfilePage}/>
           </Switch>
         </UserContext.Provider>  
       </Router>
