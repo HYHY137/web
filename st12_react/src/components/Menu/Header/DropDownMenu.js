@@ -24,7 +24,7 @@ export const DropDownMenu = () => {
         className='selection'
       >
       <Dropdown.Menu>   
-        <Dropdown.Item text='Profile' icon='user' as={Link} to='user/profile'/> 
+        <Dropdown.Item text='Profile' icon='user' as={Link} to='/user/profile'/> 
         {
           userData.user.role === "admin" && 
             (

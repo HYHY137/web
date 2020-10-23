@@ -9,6 +9,7 @@ export const Menu = function(){
     <div className="App">
       <Header />
       <Body />
+      <Footer />
     </div>
   );
 }

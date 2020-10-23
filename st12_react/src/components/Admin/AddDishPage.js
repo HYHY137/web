@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import Header from "../Menu/Header/Header";
 import UserContext from "../../context/UserContext";
-import EditTable from "./EditTable";
+import AddDish from "./AddDish";
 
-export default function EditMenu() {
+
+export default function AddDishPage() {
     const { userData } = useContext(UserContext);
     return (
         <>
             {
-                userData.user && userData.user.role === "admin" ?
+                userData.user ?
                     (
                         <div className="App">
                             <Header />
-                            <EditTable />
+                            <AddDish />
 
                         </div>
                     ) :
@@ -25,4 +26,4 @@ export default function EditMenu() {
             }
         </>
     )
-}
+}    

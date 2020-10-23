@@ -4,6 +4,12 @@
     /* background-color: aqua; */
     margin: 0;
 }
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -38,4 +44,78 @@
   to {
     transform: rotate(360deg);
   }
+}
+.you_must_be_logged_in_msg{
+  font-family: Gilroy;
+  font-style: normal;
+  font-size: 4vw;
+  color: #000000;
+  text-align: center;
+  margin-top: 30vh;
+}
+.editВish_body{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.editDish_form{
+  width: 40% !important; 
+  height: 50vh !important;
+}
+.editDish_example{
+  margin-top: -2% !important;
+  width: 20% !important; 
+  height: 50vh !important;
+}
+.bodyEditDish{
+  width: 100%;
+}
+.cardImg{
+  height: 60% !important;
+}
+.cardTitle{
+  font-family: Gilroy;
+  font-style: normal;
+  font-size: 2vw;
+  height: 15% !important;
+  margin-top: 5%;
+  color: #000000;
+  text-align: center;
+}
+.card-body{
+  height: 40% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cardDescription{
+  padding-top: 4%;
+  font-family: Gilroy;
+  font-style: normal;
+  font-size: 1.5vw;
+  margin: 0;
+  height: 50% !important;
+  width: 100%;
+  color: #000000;
+}
+.cardPriceText{
+  font-family: Gilroy;
+  font-style: normal;
+  font-size: 2vw;
+  width: 100%;
+  color: #000000;
+}
+.cardPriceNumber{
+  font-family: Gilroy;
+  font-style: normal;
+  font-size: 2vw;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+}
+.cardPrice{
+  height: 25%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.1rem solid
 }
