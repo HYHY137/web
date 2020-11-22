@@ -11,9 +11,12 @@ import Card from 'react-bootstrap/Card';
 
 export default function EditDish() {
     const { id } = useParams();
-    const { data } = useContext(DataContext);
+    const { data, setData } = useContext(DataContext);
     const { userData } = useContext(UserContext);
     let currentDish = data.dishes.find((dish) => {
+        return dish._id === id;
+    });
+    let currentDishIndex = data.dishes.findIndex((dish) => {
         return dish._id === id;
     });
     const [category, setCategory] = useState(currentDish.category);
@@ -28,7 +31,7 @@ export default function EditDish() {
         fields: [
             {
                 label: { htmlFor: "add-name", className: "login_label", text: "Name" },
-                input: { id: "add-name", placeholder: "Enter new dish name", value: name, className: "register_input", type: "text", onChange: (e) => setName(e.target.value) }
+                input: { id: "add-name", placeholder: "Enter new dish name", value: name, className: "register_input", type: "text", onChange: (e) => setName(e.target.value)  }
             },
             {
                 label: { htmlFor: "add-category", className: "login_label", text: "Category" },
@@ -69,8 +72,8 @@ export default function EditDish() {
         e.preventDefault();
 
         try {
+            setError();
             let newData = new FormData();
-            newData.append("id", id);
             if (image !== currentDish.image) {
                 newData.append("image", image);
                 newData.append("oldImage", currentDish.image)
@@ -81,7 +84,11 @@ export default function EditDish() {
             newData.append("category", category);
 
             await Axios.put("http://localhost:5000/dish/" + id, newData, config);
-            history.push("/menu/editDish/" + id);
+            const updatedDish = await Axios.get("http://localhost:5000/dish/" + id);
+            let newContext =  {...data};
+            newContext.dishes[currentDishIndex] = updatedDish.data;
+            setData(newContext);
+            history.push("/menu/edit");
         } catch (err) {
             err.response.data.msg && setError(err.response.data.msg);
         }

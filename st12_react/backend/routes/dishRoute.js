@@ -43,7 +43,6 @@ router.post("/", upload.single('image'), auth, async (req, res) => {
         if (!description) {
             description = "No provided description";
         }
-        console.log(req.file.path)
 
         const newDish = new Dish({
             category,
@@ -82,6 +81,11 @@ router.put("/:id", upload.single('image'), auth, async (req, res) => {
     try {
         if (!req.body.name) {
             return res.status(400).json({ msg: "You cant save dish wothout name" })
+        }
+        const existingDish = await Dish.findOne({ name: req.body.name });
+        
+        if (existingDish && existingDish._id.toString() !== req.params.id) {
+            return res.status(400).json({ msg: "A dish with same name alredy exists." })
         }
         if (!req.body.price && req.body.price <= 0) {
             return res.status(400).json({ msg: "Price cant be less or equal 0." })

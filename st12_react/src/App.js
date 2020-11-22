@@ -10,6 +10,7 @@ import AddDishPage from "./components/Admin/AddDishPage"
 import Login from "./components/Auth/Login/Login";
 import Register from "./components/Auth/Register/Register";
 import ProfilePage from "./components/User/ProfilePage"
+import ShoppingCart from "./components/User/ShoppingCart"
 import UserContext from "./context/UserContext";
 import DataContext from "./context/DataContext";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
@@ -86,6 +87,7 @@ function App() {
                   <Route exact path='/menu/addDish' component={AddDishPage} />
                   <Route exact path='/users' component={EditUsers} />
                   <Route exact path='/user/profile' component={ProfilePage} />
+                  <Route exact path='/user/shoppingCart' component={ShoppingCart} />
                 </Switch>
               </DataContext.Provider>
             </UserContext.Provider>

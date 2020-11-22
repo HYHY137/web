@@ -30,7 +30,7 @@ export default function AddDish() {
                 label: { htmlFor: "add-category", className: "login_label", text: "Category" },
                 input: { id: "add-category", dropdown: true, options:[{value:"salad", text: "Salad"}, {value:"starter", text: "Starter"}, 
                 {value:"soup", text: "Soup"}, {value:"mainDish", text: "Main Dish"}, {value:"drink", text: "Drink"}, {value:"desert", text: "Desert"},],
-                className: "register_input", value: "", type: "text", onChange: (e) => setCategory(e.target.value) }
+                className: "register_input", value: category, type: "text", onChange: (e) => setCategory(e.target.value) }
             },
             {
                 label: { htmlFor: "add-price", className: "login_label", text: "Price, $" },
@@ -72,6 +72,7 @@ export default function AddDish() {
             const res = await Axios.post("http://localhost:5000/dish/", newData, config);
             data.dishes.push(res.data);
             history.push("/menu/edit");
+            setError();
         } catch (err) {
             err.response.data.msg && setError(err.response.data.msg);
         }

@@ -26,4 +26,4 @@ mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {
 
 app.use("/user", require("./routes/userRoute"));
 app.use("/dish", require("./routes/dishRoute"));
-// app.use("/dish", require("./routes/cartRoute"));
+app.use("/shoppingCart", require("./routes/cartRoute"));
