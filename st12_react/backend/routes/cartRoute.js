@@ -11,9 +11,9 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.get("/:id", auth, async (req, res) => {
+router.get("/:userID", auth, async (req, res) => {
     try {
-        const dish = await Cart.find({user_id: req.params.id});
+        const dish = await Cart.find({user_id: req.params.userID}).populate("dish_id");
         res.json(dish);
     } catch (err) {
         res.status(500).json({ error: err.message });

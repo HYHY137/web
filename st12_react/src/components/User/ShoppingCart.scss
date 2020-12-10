@@ -1,0 +1,90 @@
+.shoppingCartList{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 100%;
+    height: 100%;
+}
+.title{
+    width: 30%;
+    height: 17%;
+    outline: 0;
+    justify-content: center;
+    font-family: Gilroy;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 34%;
+}
+.shoppingCartListTitle{
+    padding-bottom: 7%;
+    padding-left: 34%;
+}
+.shoppingCartListButton{
+    margin-top: 5%;
+    margin-bottom: 15%;
+    position: absolute;
+    cursor: pointer;
+    width: 30%;
+    height: 7%;
+    border: 1px solid #F7941E;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #F7941E;
+    justify-content: center;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    outline: 0;
+    color: #ffffff;
+    left: 34%;
+}
+.shoppingCartListButton:hover{
+    margin-top: 5%;
+    margin-bottom: 15%;
+    position: absolute;
+    cursor: pointer;
+    width: 30%;
+    height: 7%;
+    border: 1px solid #F7941E;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    left: 34%;
+    color: #F7941E;
+
+}
+.addDescription{
+    display: flex;
+    width: 100%;
+    height: 4%;
+    border-bottom: 1px solid #000000;
+}
+.addDescriptionText{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    box-shadow: #ffffff;
+    -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+    outline: 0;
+
+}

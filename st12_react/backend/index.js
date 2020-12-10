@@ -24,6 +24,7 @@ mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {
     console.log("MongoDB connection established ")
 });
 
+app.use("/orders", require("./routes/ordersRoute"));
 app.use("/user", require("./routes/userRoute"));
 app.use("/dish", require("./routes/dishRoute"));
 app.use("/shoppingCart", require("./routes/cartRoute"));

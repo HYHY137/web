@@ -53,8 +53,8 @@ export default function Profile() {
         e.preventDefault();
         
         try{
-            const newUser = { email, phoneNumber, name, password, passwordCheck, id: userData.user.id};
-            await Axios.put("http://localhost:5000/user/"+userData.user.id, newUser, config);
+            const newUser = { email, phoneNumber, name, password, passwordCheck, id: userData.user.id, role: userData.user.role};
+            await Axios.put("http://localhost:5000/user/" + userData.user.id, newUser, config);
             if (newUser.name || !newUser.name===""){
             setUserData({
                 token: userData.token,

@@ -151,7 +151,7 @@ const EnhancedTableToolbar = (props) => {
             headers: { "x-auth-token": userData.token }
         };
         selected.map(async (id, index) => {
-            // await Axios.delete("http://localhost:5000/dish/" + id, config);
+            await Axios.delete("http://localhost:5000/dish/" + id, config);
             const indexDeletedDish = data.dishes.findIndex((dish) => {
                 return dish._id === id;
             });
@@ -292,15 +292,9 @@ export default function EditTable() {
         const config = {
             headers: { "x-auth-token": userData.token }
         };
-        
-        // console.log(data.dishes)
-        
-        // console.log(selected)
+
         selected.map( async (id, index) => {
             await Axios.delete("http://localhost:5000/dish/" + id, config);
-            const deletedDish = data.dishes.find((dish) => {
-                return dish._id === id;
-            });
 
         });
         setData({
