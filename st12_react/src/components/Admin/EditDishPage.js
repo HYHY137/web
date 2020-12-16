@@ -8,7 +8,7 @@ export default function EditDishPage() {
     return (
         <>
             {
-                userData.user ?
+                 userData.user && userData.user.role === "admin" ?
                     (
                         <div className="App">
                             <Header />

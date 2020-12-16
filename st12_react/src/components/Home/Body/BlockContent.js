@@ -1,8 +1,11 @@
 import React from 'react';
 import "./Body.scss";
+import {Link, useHistory} from "react-router-dom";
 
 export const BlockContent = function(props){
-    const button = (<button type="button" className="button_block1_content">
+    const history = useHistory();
+    const menu = () => history.push("/menu");
+    const button = (<button type="button" className="button_block1_content" onClick={menu}>
                     <p className="text_button_block1_content">PLACE ORDER</p>
                     </button>)
     return(

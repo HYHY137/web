@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Order = require("../models/orderModel");
 const auth = require("../middleware/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
     try {
         const allOrders = await Order.find().populate("dishes.dish userID");
         res.json(allOrders);

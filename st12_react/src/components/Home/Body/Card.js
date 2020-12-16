@@ -6,7 +6,7 @@ export const Card = function(props){
         <div className="card">
             <img src={props.img} className="card_img" alt={props.alt}></img>
             <h1 className="h1_card">{props.title}</h1>
-            <a className="card_link" href={props.link}>Узнать больше ›</a>
+            {/* <a className="card_link" href={props.link}>Узнать больше ›</a> */}
         </div>
     )
 }

@@ -101,7 +101,6 @@ export default function EditDish() {
                     {
                         image !== currentDish.image ? <Card.Img variant="top" src={URL.createObjectURL(image)} className="cardImg" /> : <Card.Img variant="top" src={"http://localhost:5000/" + image} className="cardImg" />
                     }
-
                     <Card.Body className="card-body">
                         <Card.Title className="cardTitle">{name}</Card.Title>
                         <Card.Text className="cardDescription">{description}</Card.Text>
@@ -115,10 +114,7 @@ export default function EditDish() {
                     {error && <ErrorNotice message={error} clearError={() => setError(undefined)} />}
                     <Form onSubmit={submit} formClass={form.formClass} style={{ height: "100%" }} fields={form.fields} button={form.button} />
                 </div>
-
             </div>
-
-
         </div>
     )
 }

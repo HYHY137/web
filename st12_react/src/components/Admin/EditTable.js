@@ -338,7 +338,6 @@ export default function EditTable() {
                             </Tooltip>
                         )}
                 </Toolbar>
-                {/* <EnhancedTableToolbar numSelected={selected.length} selected={selected} /> */}
                 <TableContainer>
                     <Table
                         className={classes.table}
@@ -415,8 +414,4 @@ export default function EditTable() {
 
         </div>
     );
-    // return(
-    //     <>
-    //     </>
-    // )
 }

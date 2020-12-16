@@ -5,7 +5,9 @@ import { Home } from "./components/Home/Home";
 import { Menu } from "./components/Menu/Menu";
 import EditMenu from "./components/Admin/EditMenu";
 import EditUsers from "./components/Admin/EditUsers";
+import EditOrders from "./components/Admin/EditOrders";
 import EditDishPage from "./components/Admin/EditDishPage";
+import OrderDetilsPage from "./components/Admin/OrderDishesPage";
 import AddDishPage from "./components/Admin/AddDishPage"
 import Login from "./components/Auth/Login/Login";
 import Register from "./components/Auth/Register/Register";
@@ -83,7 +85,9 @@ function App() {
                   <Route exact path='/register' component={Register} />
                   <Route exact path='/menu' component={Menu} />
                   <Route exact path='/menu/edit' component={EditMenu} />
+                  <Route exact path='/orders' component={EditOrders} />
                   <Route exact path='/menu/editDish/:id' component={EditDishPage} />
+                  <Route exact path='/orderDetails/:id' component={OrderDetilsPage} />
                   <Route exact path='/menu/addDish' component={AddDishPage} />
                   <Route exact path='/users' component={EditUsers} />
                   <Route exact path='/user/profile' component={ProfilePage} />

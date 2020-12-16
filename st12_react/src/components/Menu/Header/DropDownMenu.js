@@ -29,7 +29,8 @@ export const DropDownMenu = () => {
           userData.user.role === "admin" && 
             (
             <>
-            <Dropdown.Item text='Edit users' icon='users' as={Link} to='/users'/> 
+            {/* <Dropdown.Item text='Edit users' icon='users' as={Link} to='/users'/> */}
+            <Dropdown.Item text='Edit orders' icon='edit' as={Link} to='/orders'/>  
             <Dropdown.Item text='Edit menu' icon='edit outline' as={Link} to='/menu/edit'/>
             </>
             )

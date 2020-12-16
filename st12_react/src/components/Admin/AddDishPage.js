@@ -9,7 +9,7 @@ export default function AddDishPage() {
     return (
         <>
             {
-                userData.user.role === "admin" ?
+                userData.user && userData.user.role === "admin" ?
                     (
                         <div className="App">
                             <Header />
