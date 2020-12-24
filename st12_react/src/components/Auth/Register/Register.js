@@ -42,23 +42,23 @@ export default function Register() {
         formClass: "login_input_fields",
         fields: [
             {   label: { htmlFor: "register-email", className: "login_label", text: "Email"},
-                input: { id: "register-email", required: "true", placeholder:"example@gmail.com", className: "register_input", type: "email", onChange: (e) => setEmail(e.target.value)}
+                input: { id: "register-email", required: true, placeholder:"example@gmail.com", className: "register_input", type: "email", onChange: (e) => setEmail(e.target.value)}
             },
             {   
                 label: { htmlFor: "register-phone", className: "login_label", text: "Phone"},
-                input: { id: "register-phone", required: "true", placeholder:"exapmle: +375291284567", className: "register_input", type: "phone", onChange: (e) => setPhoneNumber(e.target.value)}
+                input: { id: "register-phone", required: true, placeholder:"exapmle: +375291284567", className: "register_input", type: "phone", onChange: (e) => setPhoneNumber(e.target.value)}
             },
             {   
                 label: { htmlFor: "register-name", className: "login_label", text: "Name"},
-                input: { id: "register-name", required: "false", placeholder:"exapmle: Alex", className: "register_input", type: "text", onChange: (e) => setName(e.target.value)}
+                input: { id: "register-name", required: false, placeholder:"exapmle: Alex", className: "register_input", type: "text", onChange: (e) => setName(e.target.value)}
             },
             {   
                 label: { htmlFor: "register-password", className: "login_label", text: "Password"},
-                input: { id: "register-password", required: "true", placeholder:"no less 6 char.", className: "register_input", type: "password", onChange: (e) => setPassword(e.target.value)}
+                input: { id: "register-password", required: true, placeholder:"no less 6 char.", className: "register_input", type: "password", onChange: (e) => setPassword(e.target.value)}
             },
             {   
                 label: { htmlFor: "register-password-verify", className: "login_label", text: "Verify Password"},
-                input: { id: "register-password-verify", required: "true", placeholder:"Repeat your password", className: "register_input", type: "password", onChange: (e) => setPasswordCheck(e.target.value)}
+                input: { id: "register-password-verify", required: true, placeholder:"Repeat your password", className: "register_input", type: "password", onChange: (e) => setPasswordCheck(e.target.value)}
             }
         ],
         button: {className:"register_button", value:"Register"}

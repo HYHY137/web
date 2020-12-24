@@ -13,7 +13,7 @@ export default function Login() {
     const [error, setError] = useState();
 
     const history = useHistory();
-    const { userData, setUserData } = useContext(UserContext);
+    const { setUserData } = useContext(UserContext);
 
 
     const submit = async (e) => {
@@ -38,11 +38,11 @@ export default function Login() {
         formClass: "login_input_fields",
         fields: [
             {   label: { htmlFor: "login-email", className: "login_label", text: "Email"},
-                input: { id: "login-email", required: "true", placeholder:"Enter your email", className: "login_input", type: "email", onChange: (e) => setEmail(e.target.value)}
+                input: { id: "login-email", required: true, placeholder:"Enter your email", className: "login_input", type: "email", onChange: (e) => setEmail(e.target.value)}
             },
             {   
                 label: { htmlFor: "login-password", className: "login_label", text: "Password"},
-                input: { id: "login-password", required: "true", placeholder:"Enter your password", className: "login_input", type: "password", onChange: (e) => setPassword(e.target.value)}
+                input: { id: "login-password", required: true, placeholder:"Enter your password", className: "login_input", type: "password", onChange: (e) => setPassword(e.target.value)}
             }
         ],
         button: {className:"login_button", value:"Login"}

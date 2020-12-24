@@ -1,12 +1,10 @@
-import React, { useContext, useState, useEffect } from 'react';
-import UserContext from "../../context/UserContext";
+import React from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import Button from '@material-ui/core/Button';
 import "../../App.scss";
 import { useHistory } from "react-router-dom";
 
 export default function EditOrders(props) {
-    const { userData } = useContext(UserContext);
     const history = useHistory();
     const onOpenButtonClick = (id) =>{
       history.push("/orderDetails/" + id);

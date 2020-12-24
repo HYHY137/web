@@ -5,9 +5,6 @@ import { Services } from './Services';
 import { Addresses } from './Addresses';
 
 class Body extends React.Component{
-    constructor(props){
-        super(props);    
-    }
     render(){
         return(
             <div className="container" id="container">

@@ -7,7 +7,7 @@ import {DropDownMenu} from "./DropDownMenu"
 import UserContext from "../../../context/UserContext";
 
 export default function Header() {
-    const { userData, setUserContext } = useContext(UserContext);
+    const { userData } = useContext(UserContext);
 
     const history = useHistory();
     const login = () => history.push("/login");

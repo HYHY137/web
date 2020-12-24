@@ -27,7 +27,6 @@ export default function EditOrders() {
                     techID: row._id
                 };
                 newRows.push(newRow);
-                console.log(res.data)
             });
             setRows(newRows);
             setLoading(false);

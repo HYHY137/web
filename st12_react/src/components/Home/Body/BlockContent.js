@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Body.scss";
-import {Link, useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export const BlockContent = function(props){
     const history = useHistory();

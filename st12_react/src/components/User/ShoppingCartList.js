@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import DeleteIcon from '@material-ui/icons/Delete';
 import "./ShoppingCart.scss";
 import UserContext from "../../context/UserContext";
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+import {  NotificationManager } from 'react-notifications';
 import Axios from 'axios';
 
 
@@ -104,7 +104,7 @@ export default function ShoppingCartList(props) {
                 <List >
                     {data.currentUserDishes.map((row, index) => {
                         return (
-                            <ListItem>
+                            <ListItem >
                                 <ListItemAvatar>
                                     <Avatar alt="Img" src={"http://localhost:5000/" + row.dish_id.image} />
                                 </ListItemAvatar>

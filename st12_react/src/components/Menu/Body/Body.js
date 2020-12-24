@@ -1,9 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Links } from "../../Home/Header/Links";
 import "./MenuBody.scss";
 import DataContext from "../../../context/DataContext";
 import UserContext from "../../../context/UserContext";
-import { useHistory } from "react-router-dom";
 import Axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import CounterInput from "react-counter-input";
@@ -20,8 +19,8 @@ export default function Body() {
         { ref: "addresses", label: "Десерты" },
     ];
 
-    const { data, setData } = useContext(DataContext);
-    const { userData, setUserData } = useContext(UserContext);
+    const { data } = useContext(DataContext);
+    const { userData } = useContext(UserContext);
 
 
 
@@ -73,7 +72,7 @@ export default function Body() {
                 count: getCount(index, category),
                 dishID: dishID,
             };
-            const res = await Axios.post("http://localhost:5000/shoppingCart/", newEntry, config);
+            await Axios.post("http://localhost:5000/shoppingCart/", newEntry, config);
 
             NotificationManager.success('Dish was added to you shopping cart', 'Success', 2000);
         } catch {
@@ -90,13 +89,13 @@ export default function Body() {
                 sections.map((section, sectionIndex) => {
                     if (Object.entries(section.object).length !== 0) {
                         return (
-                            <div >
+                            <div key={sectionIndex}>
                                 <h2 className="menu_section_header">{section.label}:</h2>
                                 <div className="menu_section">
                                     {
                                         section.object.map((dish, index) => {
                                             return (
-                                                <Card className="menu_card" id={dish.category + "card" + index}>
+                                                <Card key={index} className="menu_card" id={dish.category + "card" + index}>
                                                     <Card.Body className="menu_card_body">
                                                         <div className="menuCardImg">
                                                             <Card.Img variant="top" src={"http://localhost:5000/" + dish.image} className="menuCardImg" />

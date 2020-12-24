@@ -3,14 +3,14 @@ import Header from "../Menu/Header/Header";
 import UserContext from "../../context/UserContext";
 import ShoppingCartList from "./ShoppingCartList";
 import Axios from 'axios';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
+import {NotificationContainer } from 'react-notifications';
 
 
 export default function ShoppingCart() {
     const [data, setData] = useState({
         currentUserDishes: [],
     });
-    const { userData, setUserData } = useContext(UserContext);
+    const { userData } = useContext(UserContext);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {        

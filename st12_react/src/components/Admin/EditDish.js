@@ -1,7 +1,6 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import UserContext from "../../context/UserContext";
 import DataContext from "../../context/DataContext";
-import Header from "../Menu/Header/Header";
 import { useHistory, useParams } from "react-router-dom";
 import Axios from 'axios';
 import ErrorNotice from '../misc/ErrorNotice';

@@ -137,8 +137,8 @@ const useToolbarStyles = makeStyles((theme) => ({
 
 const EnhancedTableToolbar = (props) => {
     const classes = useToolbarStyles();
-    const { data, setData } = useContext(DataContext);
-    const { userData, setUserData } = useContext(UserContext);
+    const { data } = useContext(DataContext);
+    const { userData } = useContext(UserContext);
     let { numSelected, selected } = props;
     const history = useHistory();
     const addDish = () => {
@@ -152,7 +152,7 @@ const EnhancedTableToolbar = (props) => {
         };
         selected.map(async (id, index) => {
             await Axios.delete("http://localhost:5000/dish/" + id, config);
-            const indexDeletedDish = data.dishes.findIndex((dish) => {
+            data.dishes.findIndex((dish) => {
                 return dish._id === id;
             });
             window.location.reload(false);
@@ -230,7 +230,7 @@ export default function EditTable() {
     const [selected, setSelected] = React.useState([]);
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
-    const { userData, setUserData } = useContext(UserContext);
+    const { userData } = useContext(UserContext);
 
     const history = useHistory();
 

@@ -1,15 +1,14 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import UserContext from "../../context/UserContext";
 import DataContext from "../../context/DataContext";
-import Header from "../Menu/Header/Header";
 import { useHistory } from "react-router-dom";
 import Axios from 'axios';
 import ErrorNotice from '../misc/ErrorNotice';
 import Form from '../misc/Form';
 
 export default function AddDish() {
-    const { userData, setUserData } = useContext(UserContext);
-    const { data, setData } = useContext(DataContext);
+    const { userData} = useContext(UserContext);
+    const { data } = useContext(DataContext);
 
     const [category, setCategory] = useState();
     const [description, setDescription] = useState();
